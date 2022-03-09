@@ -16,3 +16,16 @@ This is a simple git exercise to explore functionality related to tags and trunk
 4. `git push origin main`
 5. `git tag -a v1.0.0 -m "Second version"`
 6. `git push origin v1.0.0`
+
+## Step 3
+
+1. `git checkout -b hotfix/1 v0.0.1`
+2. Create v0.0.1.hotfix.md file with some content
+3. `git add .`
+4. `git commit -m "Created hotfix v0.0.2"`
+5. `git push origin hotfix/1`
+6. Create PR - assume no squash is needed after the PR is approved
+7. Approve PR
+8. Delete branch after approving PR
+9. `git tag -a v0.0.2 -m "Hotfix v0.0.2"`
+10. `git push origin v0.0.2`
