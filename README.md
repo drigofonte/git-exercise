@@ -29,3 +29,20 @@ This is a simple git exercise to explore functionality related to tags and trunk
 8. Delete branch after approving PR
 9. `git tag -a v0.0.2 -m "Hotfix v0.0.2"`
 10. `git push origin v0.0.2`
+
+## Step 4
+
+1. `git checkout -b hotfix/2 v0.0.2`
+2. Create v0.0.2.hotfix.md file with some content
+3. `git add .`
+4. `git commit -m "Created v0.0.2.hotfix.md"`
+5. Update v0.0.2.hotfix.md file with some content
+6. `git add .`
+7. `git commit -m "Updated v0.0.2.hotfix.md"`
+8. `git rebase -i HEAD~2` - squash the last commit into the first and change the message to 'Created hotfix v0.0.3'
+9. `git push origin hotfix/2`
+10. Create PR - assume no squash is needed after the PR is approved
+11. Approve PR
+12. Delete branch after approving PR
+13. `git tag -a v0.0.3 -m "Hotfix v0.0.3"`
+14. `git push origin v0.0.3`
